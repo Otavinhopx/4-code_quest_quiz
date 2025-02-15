@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Quiz from './components/Quiz.jsx'
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Quiz />
+      <Quiz />
   </StrictMode>,
 )

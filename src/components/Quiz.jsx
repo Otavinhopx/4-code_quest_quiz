@@ -1,5 +1,6 @@
 import quizQuestions from './quizQuestions'
 import { useState } from 'react' 
+import Logo from './Logo'
 
 const Quiz = () => {
     const [activeQuestion, setActiveQuestion] = useState(0);
@@ -29,15 +30,17 @@ const Quiz = () => {
   
 
     return (
-      <div>
-        <h1>Quiz</h1>
-        <h2>{question}</h2>
-        <ul>
-            {choices.map((answer, index) => (
-                <li key={index} onClick={() => onAnswerSelected(answer)}>{answer}</li>
-            ))}
-        </ul>
-        <button onClick={onClickNext}>Next</button>
+      <div className='h-[59.78em] w-[120em] bg-[url(./assets/background.jpg)] flex items-center justify-center'>
+        <div className='bg-white w-[80em] h-[50em] rounded-xl inset-shadow-sm inset-shadow-black flex flex-col justify-center items-center gap-10'>
+          <Logo />
+          <h2 className='text-[40px] w-[25em] h-[3em] flex justify-center items-center'>{question}</h2>
+          <ul className='flex flex-col gap-7'>
+              {choices.map((answer, index) => (
+                  <li className='text-[20px] border-2 border-black rounded-xl w-[50em] h-[2.5em] flex justify-center bg-[#052037] text-white items-center hover:bg-[#01090f]' key={index} onClick={() => onAnswerSelected(answer)}>{answer}</li>
+              ))}
+          </ul>
+          <button className='w-80 h-20' onClick={onClickNext}>Próxima</button>
+        </div>
       </div>
     )
   }
