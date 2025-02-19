@@ -1,4 +1,4 @@
-# Quiz Interativo 📚
+# CODE QUIZ QUEST - Quiz Interativo 📚
 
 ## 📌 Sobre o Projeto
 Este é um aplicativo de quiz interativo desenvolvido com React e React Router. O objetivo é testar conhecimentos sobre programação através de perguntas de múltipla escolha.
