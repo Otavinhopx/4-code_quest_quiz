@@ -1,7 +1,9 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, Pixelify Sans, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,6 +15,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --font-principal: "Pixelify Sans";
 }
 
 a {
@@ -30,30 +33,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-family: "Press Start 2P", serif;
+  color:black
 }
 
 @media (prefers-color-scheme: light) {
@@ -64,7 +45,45 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
+  button{
+    background-color: #13a7a9;
+    border-radius: 2em;
+    color: white;
+    border: black solid 3.5px;
+    font-weight: bold;
   }
+  button:hover{
+    background-color: #0d6c6e;
+  }
+}
+
+.answer{
+  /*'text-[20px] border-2 border-black rounded-xl w-[50em] h-[2.5em] flex justify-center bg-[#052037] text-white items-center hover:bg-[#01090f]'*/
+  font-size: 20px;
+  border:black solid 4px;
+  border-radius: 2em;
+  width: 50em;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  background-color: #052037;
+  color: white;
+  align-items: center;
+  cursor: pointer;
+}
+
+.answer:hover{
+  background-color: #03182a;
+}
+
+.selected_answer{
+  height: 5em;
+  background-color: #13a7a9;
+  font-size: 20px;
+  border:black solid 4px;
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
 }
